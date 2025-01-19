@@ -1,17 +1,22 @@
 # Scala Library for Allay Plugins
 
-Scala standard library for allay
+Scala standard library and scala toolkit packages for allay.
 
 ## Usage
 
-To compile the project
+### For Plugin Users
 
-```bash
-sbt compile
+Put the jar in release into `plugins` folder.
+
+### For Plugin Developer
+
+Write the following json to the `dependencies` to ensure that the dependency library is loaded
+
+```json
+{
+    "name":"AllayScalaLibrary",
+    "version":"3.6.2"
+}
 ```
 
-To package the score with scala library (using sbt-assembly)
-
-``` bash
-sbt assembly
-```
+You can add `ivy"org.scala-lang::toolkit:0.6.0"` into your compilonly dependencies. and not carrying the scala standard library in the plugin.
