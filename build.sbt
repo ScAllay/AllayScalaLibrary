@@ -6,7 +6,7 @@ lazy val root = project
   .in(file("."))
   .settings(
     name := "AllayScalaLibrary",
-    version := "3.6.2",
+    version := "3.7.2",
     scalaVersion := scala3Version,
 
     resolvers ++= Seq(
@@ -21,8 +21,8 @@ lazy val root = project
     ivyConfigurations += Compilonly,
 
     libraryDependencies ++= Seq(
-      "org.allaymc.allay" % "api" % "0.1.3" % Compilonly,
-      "org.scala-lang" %% "toolkit" % "0.6.0",
+      "org.allaymc.allay" % "api" % "0.7.1" % Compilonly,
+      "org.scala-lang" %% "toolkit" % "0.7.0",
     ),
 
     Compile / unmanagedClasspath ++=
